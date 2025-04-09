@@ -17,19 +17,53 @@
 <body>
     <div class="main-container">
         <nav>
-            <div id="Logo_booki">
+            <div id="logo-booki">
                 <img src="/images//logo/Booki.png" alt="Logo Booki">
             </div>
             <ul id="menu">
                 <li>
-                    <a href="#" id="Lien_hebergement">Hébergement</a>
+                    <a href="#" id="lien-hebergement">Hébergements</a>
                 </li>
                 <li>
-                    <a href="#" id="Lien_activites">Activités</a>
+                    <a href="#" id="lien-activites">Activités</a>
                 </li>
             </ul>
         </nav>
-        <header></header>
+        <header>
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+            <p id="margin-titre">En plein centre-ville ou en pleine nature</p>
+            <form method="get" action="#">
+                <div id="zone-de-recherche">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    <label for="ville-rechercher"></label>
+                    <input type="text" name="ville-rechercher" id="ville-rechercher" value="Marseille, France">
+                    <input class="boutton-rechercher" type="submit" value="Rechercher">
+                </div>
+            </form>
+            <div id="filtre-recherche">
+                <h2>Filtres</h2>
+                <div class="boutton-filtre">
+                    <i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i>
+                    <a href="#"><strong>Économique</strong></a>
+                </div>
+                <div class="boutton-filtre">
+                    <i class="fa-solid fa-person" aria-hidden="true"></i>
+                    <a href="#"><strong>Familial</strong></a>
+                </div>
+                <div class="boutton-filtre">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    <a href="#"><strong>Romantique</strong></a>
+                </div>
+                <div class="boutton-filtre">
+                    <i class="fa-solid fa-fire" aria-hidden="true"></i>
+                    <a href="#"><strong>Nos pépites</strong></a>
+                </div>
+            </div>
+            <div id="info-resultat">
+                <i class="fa-solid fa-info" aria-hidden="true"></i>
+                <p>Plus de 500 logements sont diponibles dans cette ville</p>
+            </div>
+        </header>
         <main>
             <div class="hebergements-and-populaires">
                 <section class="hebergements">
@@ -104,6 +138,9 @@
                     </div>
                 </section>
             </div>
+            <section class="activites">
+
+            </section>
         </main>
         <footer></footer>
     </div>
