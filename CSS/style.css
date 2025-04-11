@@ -21,6 +21,7 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
+    min-width: 320px;
     padding: 0 50px;
     box-sizing: border-box;
 }
@@ -85,8 +86,7 @@ nav {
     text-decoration: none;
 }
 
-#lien-hebergement:hover,
-#lien-activites:hover {
+#menu li:hover {
     border-top: 2px solid var(--main-color);
     padding-top: 22px;
     color: var(--main-color);
@@ -140,7 +140,7 @@ textarea:focus {
     height: 49px;
 }
 
-#zone-de-recherche {
+.zone-de-recherche {
     display: flex;
     align-items: center;
     border: 1px solid #F2F2F2;
@@ -150,11 +150,16 @@ textarea:focus {
     margin: 35px 0;
 }
 
-#filtre-recherche,
-#info-resultat {
+.filtre-recherche,
+.info-resultat {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 15px;
+}
+
+.filtre-recherche {
+    white-space: nowrap;
 }
 
 .boutton-filtre {
@@ -172,7 +177,7 @@ textarea:focus {
     background-color: var(--filter-bg-color);
 }
 
-#info-resultat {
+.info-resultat {
     margin: 30px 0;
     gap: 10px;
 }
@@ -205,19 +210,26 @@ textarea:focus {
     width: 65%;
 }
 
+.hebergements h2 {
+    margin: 0;
+}
+
+.hebergements-cards a {
+    width: 30%;
+    margin-top: 30px;
+}
+
 .hebergements-cards {
     display: flex;
-    gap: 30px;
+    justify-content: space-between;
     flex-wrap: wrap;
-    width: 100%;
 }
 
 .hebergements-cards .card {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 230px;
-    height: 207px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .hebergements-cards img {
@@ -236,10 +248,6 @@ textarea:focus {
     box-sizing: border-box;
 }
 
-.hebergements h2 {
-    margin: 0 0 30px 0;
-}
-
 .hebergements-cards .card-title {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -255,7 +263,6 @@ textarea:focus {
 
 #lien-afficher-plus {
     margin-top: 30px;
-    margin-bottom: 0;
     font-size: large;
 }
 
@@ -311,20 +318,23 @@ textarea:focus {
     margin-top: 50px;
 }
 
+.activites a {
+    width: 22%;
+}
+
 .activites-cards {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    width: 100%;
-    padding-left: 30px;
-    margin-bottom: 60px;
 }
 
 .activites-cards .card {
     display: flex;
-    flex-direction: column;
-    width: 300px;
+    flex-wrap: wrap;
+    width: 100%;
     padding: 0;
+    margin-left: 30px;
+    height: 100%;
 }
 
 .activites-cards img {
@@ -336,16 +346,16 @@ textarea:focus {
 
 .activites-cards .card-content {
     font-size: smaller;
-    padding: 10px 15px 10px 20px;
+    padding: 0 19px;
 }
 
 /******** footer ********/
 
 .pied-de-page {
     background-color: var(--main-bg-color);
-    margin-top: 15px;
+    margin-top: 75px;
     display: flex;
-    gap: 20%;
+    justify-content: space-between;
 }
 
 .colones-footer h2 {
@@ -354,6 +364,8 @@ textarea:focus {
 
 .colones-footer {
     padding: 10px;
+    margin-left: 15px;
+    width: 33%;
 }
 
 .colones-footer ul {
@@ -363,7 +375,7 @@ textarea:focus {
 }
 
 .colones-footer li {
-    margin:15px 0;
+    margin: 15px 0;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -401,9 +413,63 @@ textarea:focus {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .filtre-recherche h2 {
+        width: 100%;
+    }
+
+    .activites-cards img {
+        height: 200px;
+    }
+
+    .activites a {
+        width: 20.75%;
+    }
+
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+
     /* ... */
+    .main-container {
+        padding: 0;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        display: block;
+    }
+
+    #logo-booki {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    #menu {
+        justify-content: space-around;
+        padding-left: 0;
+        gap: 30px;
+        font-size: x-large;
+    }
+    #menu li {
+        width: 100%;
+        margin: -15px;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+        border-bottom: 2px solid var(--main-bg-color);
+    }
+    #menu li:hover {
+        border-top: none;
+        padding-top: 0;
+        border-bottom: 2px solid var(--main-color);
+        padding-bottom: 21px;
+        color: var(--main-color);
+    }
+
 }
