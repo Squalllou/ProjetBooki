@@ -402,6 +402,10 @@ textarea:focus {
         flex-direction: column;
     }
 
+    #menu {
+        width: 30%;
+    }
+
     .hebergements {
         width: 100%;
     }
@@ -476,7 +480,7 @@ textarea:focus {
         border-top: none;
         border-bottom: 2px solid var(--main-bg-color);
     }
-    
+
     .link-nav:hover {
         border-top: none;
         border-bottom: 2px solid var(--main-color);
@@ -493,7 +497,7 @@ textarea:focus {
         width: 100%;
     }
 
-    .search-filter h2{
+    .search-filter h2 {
         margin: 0;
     }
 
